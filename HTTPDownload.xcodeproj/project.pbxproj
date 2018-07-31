@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8E6B139EACEFC9DE4B08F941 /* libPods-HTTPDownload.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B5CC1ECB17262C5892B324 /* libPods-HTTPDownload.a */; };
+		9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */; };
+		9374CEAA210F9E34004C6C9B /* DownloadManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */; };
+		9374CEAD210F9F6C004C6C9B /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */; };
+		93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26642110426000CE3D5A /* DownloadTableView.m */; };
+		93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26672110438000CE3D5A /* DownloadTableViewObject.m */; };
+		93AB266E2110680D00CE3D5A /* DownloadInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB266D2110680D00CE3D5A /* DownloadInputView.m */; };
+		93AB26722110D69800CE3D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB26712110D69800CE3D5A /* Main.storyboard */; };
 		93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8E9210EF92900CFA398 /* AppDelegate.m */; };
 		93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8EC210EF92900CFA398 /* ViewController.m */; };
-		93DEB8F0210EF92900CFA398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8EE210EF92900CFA398 /* Main.storyboard */; };
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
 		93DEB8F5210EF92D00CFA398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */; };
 		93DEB8F8210EF92D00CFA398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8F7210EF92D00CFA398 /* main.m */; };
@@ -19,12 +25,24 @@
 /* Begin PBXFileReference section */
 		02B5CC1ECB17262C5892B324 /* libPods-HTTPDownload.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTTPDownload.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06135C299DFEDA535AA45CE9 /* Pods-HTTPDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPDownload/Pods-HTTPDownload.release.xcconfig"; sourceTree = "<group>"; };
+		9374CEA4210F0F93004C6C9B /* DownloadTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
+		9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
+		9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManagerModel.h; sourceTree = "<group>"; };
+		9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerModel.m; sourceTree = "<group>"; };
+		9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
+		9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
+		93AB26632110426000CE3D5A /* DownloadTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableView.h; sourceTree = "<group>"; };
+		93AB26642110426000CE3D5A /* DownloadTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableView.m; sourceTree = "<group>"; };
+		93AB26662110438000CE3D5A /* DownloadTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewObject.h; sourceTree = "<group>"; };
+		93AB26672110438000CE3D5A /* DownloadTableViewObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewObject.m; sourceTree = "<group>"; };
+		93AB266C2110680D00CE3D5A /* DownloadInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadInputView.h; sourceTree = "<group>"; };
+		93AB266D2110680D00CE3D5A /* DownloadInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadInputView.m; sourceTree = "<group>"; };
+		93AB26712110D69800CE3D5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		93DEB8E5210EF92900CFA398 /* HTTPDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEB8E8210EF92900CFA398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93DEB8E9210EF92900CFA398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		93DEB8EB210EF92900CFA398 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		93DEB8EC210EF92900CFA398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		93DEB8EF210EF92900CFA398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93DEB8F1210EF92D00CFA398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93DEB8F4210EF92D00CFA398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DEB8F6210EF92D00CFA398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +71,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9374CEA3210F0A09004C6C9B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				93DEB8EB210EF92900CFA398 /* ViewController.h */,
+				93DEB8EC210EF92900CFA398 /* ViewController.m */,
+				9374CEA4210F0F93004C6C9B /* DownloadTableViewCell.h */,
+				9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */,
+				93AB26632110426000CE3D5A /* DownloadTableView.h */,
+				93AB26642110426000CE3D5A /* DownloadTableView.m */,
+				93AB26662110438000CE3D5A /* DownloadTableViewObject.h */,
+				93AB26672110438000CE3D5A /* DownloadTableViewObject.m */,
+				93AB266C2110680D00CE3D5A /* DownloadInputView.h */,
+				93AB266D2110680D00CE3D5A /* DownloadInputView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9374CEA7210F9B52004C6C9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */,
+				9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */,
+				9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */,
+				9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93AB2669211059F800CE3D5A /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				93DEB8E8210EF92900CFA398 /* AppDelegate.h */,
+				93DEB8E9210EF92900CFA398 /* AppDelegate.m */,
+				93DEB8F1210EF92D00CFA398 /* Assets.xcassets */,
+				93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */,
+				93DEB8F7210EF92D00CFA398 /* main.m */,
+				93AB26712110D69800CE3D5A /* Main.storyboard */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		93DEB8DC210EF92900CFA398 = {
 			isa = PBXGroup;
 			children = (
@@ -74,15 +133,10 @@
 		93DEB8E7210EF92900CFA398 /* HTTPDownload */ = {
 			isa = PBXGroup;
 			children = (
-				93DEB8E8210EF92900CFA398 /* AppDelegate.h */,
-				93DEB8E9210EF92900CFA398 /* AppDelegate.m */,
-				93DEB8EB210EF92900CFA398 /* ViewController.h */,
-				93DEB8EC210EF92900CFA398 /* ViewController.m */,
-				93DEB8EE210EF92900CFA398 /* Main.storyboard */,
-				93DEB8F1210EF92D00CFA398 /* Assets.xcassets */,
-				93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */,
 				93DEB8F6210EF92D00CFA398 /* Info.plist */,
-				93DEB8F7210EF92D00CFA398 /* main.m */,
+				93AB2669211059F800CE3D5A /* Default */,
+				9374CEA7210F9B52004C6C9B /* Model */,
+				9374CEA3210F0A09004C6C9B /* UI */,
 			);
 			path = HTTPDownload;
 			sourceTree = "<group>";
@@ -154,8 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DEB8F5210EF92D00CFA398 /* LaunchScreen.storyboard in Resources */,
+				93AB26722110D69800CE3D5A /* Main.storyboard in Resources */,
 				93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */,
-				93DEB8F0210EF92900CFA398 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9374CEAA210F9E34004C6C9B /* DownloadManagerModel.m in Sources */,
 				93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */,
+				93AB266E2110680D00CE3D5A /* DownloadInputView.m in Sources */,
+				93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */,
+				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
+				9374CEAD210F9F6C004C6C9B /* DownloadObjectModel.m in Sources */,
+				93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */,
 				93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,14 +256,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93DEB8EE210EF92900CFA398 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93DEB8EF210EF92900CFA398 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -331,8 +383,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36B6SWNZ97;
+				DEVELOPMENT_TEAM = Q2J8JLH69D;
 				INFOPLIST_FILE = HTTPDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,8 +402,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36B6SWNZ97;
+				DEVELOPMENT_TEAM = Q2J8JLH69D;
 				INFOPLIST_FILE = HTTPDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
