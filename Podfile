@@ -7,4 +7,5 @@ target 'HTTPDownload' do
 
   # Pods for HTTPDownload
 pod 'AFNetworking', '~> 3.0' 
+pod 'Nimbus'
 end

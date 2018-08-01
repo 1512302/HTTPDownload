@@ -15,6 +15,9 @@
 		93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26672110438000CE3D5A /* DownloadTableViewObject.m */; };
 		93AB266E2110680D00CE3D5A /* DownloadInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB266D2110680D00CE3D5A /* DownloadInputView.m */; };
 		93AB26722110D69800CE3D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB26712110D69800CE3D5A /* Main.storyboard */; };
+		93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2674211150B100CE3D5A /* InformationTableViewCell.m */; };
+		93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2677211155A000CE3D5A /* TableViewModel.m */; };
+		93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267A2111563F00CE3D5A /* CellObjectModel.m */; };
 		93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8E9210EF92900CFA398 /* AppDelegate.m */; };
 		93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8EC210EF92900CFA398 /* ViewController.m */; };
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
@@ -38,6 +41,12 @@
 		93AB266C2110680D00CE3D5A /* DownloadInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadInputView.h; sourceTree = "<group>"; };
 		93AB266D2110680D00CE3D5A /* DownloadInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadInputView.m; sourceTree = "<group>"; };
 		93AB26712110D69800CE3D5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		93AB2673211150B100CE3D5A /* InformationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
+		93AB2674211150B100CE3D5A /* InformationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
+		93AB2676211155A000CE3D5A /* TableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewModel.h; sourceTree = "<group>"; };
+		93AB2677211155A000CE3D5A /* TableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewModel.m; sourceTree = "<group>"; };
+		93AB26792111563F00CE3D5A /* CellObjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellObjectModel.h; sourceTree = "<group>"; };
+		93AB267A2111563F00CE3D5A /* CellObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellObjectModel.m; sourceTree = "<group>"; };
 		93DEB8E5210EF92900CFA398 /* HTTPDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEB8E8210EF92900CFA398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93DEB8E9210EF92900CFA398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +93,8 @@
 				93AB26672110438000CE3D5A /* DownloadTableViewObject.m */,
 				93AB266C2110680D00CE3D5A /* DownloadInputView.h */,
 				93AB266D2110680D00CE3D5A /* DownloadInputView.m */,
+				93AB2673211150B100CE3D5A /* InformationTableViewCell.h */,
+				93AB2674211150B100CE3D5A /* InformationTableViewCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -95,6 +106,10 @@
 				9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */,
 				9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */,
 				9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */,
+				93AB2676211155A000CE3D5A /* TableViewModel.h */,
+				93AB2677211155A000CE3D5A /* TableViewModel.m */,
+				93AB26792111563F00CE3D5A /* CellObjectModel.h */,
+				93AB267A2111563F00CE3D5A /* CellObjectModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,8 +260,11 @@
 				93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */,
 				93AB266E2110680D00CE3D5A /* DownloadInputView.m in Sources */,
 				93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */,
+				93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */,
+				93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */,
 				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
+				93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */,
 				9374CEAD210F9F6C004C6C9B /* DownloadObjectModel.m in Sources */,
 				93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */,
 				93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */,

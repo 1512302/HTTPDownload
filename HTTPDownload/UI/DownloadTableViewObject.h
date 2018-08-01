@@ -10,6 +10,8 @@
 
 @interface DownloadTableViewObject : NSObject
 
+@property (readwrite, nonatomic, strong) NSString *title;
 
+@property (readwrite, nonatomic, strong)
 
 @end

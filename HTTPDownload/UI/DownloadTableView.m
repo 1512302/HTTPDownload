@@ -18,13 +18,21 @@
 }
 */
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    if (!_downloadArray || _downloadArray.count == 0) {
+    
     }
-    return self;
 }
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (!_downloadArray || _downloadArray.count == 0) {
+        return 1;
+    }
+    return _downloadArray.count;
+}
+
+
 
 @end

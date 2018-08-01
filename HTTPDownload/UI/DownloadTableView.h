@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DownloadTableView : UITableView
+@interface DownloadTableView : UITableView <UITableViewDataSource>
+
+@property (strong, nonatomic, readonly) NSMutableArray *downloadArray;
 
 
 
