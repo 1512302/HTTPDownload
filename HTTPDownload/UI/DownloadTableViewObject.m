@@ -11,7 +11,7 @@
 
 @interface DownloadTableViewObject()
 
-
+@property (atomic) dispatch_queue_t serialQueue;
 
 @end
 
@@ -28,6 +28,7 @@
         _title = @"Downloading...";
         _progressString = @"Downloading...";
         _progress = 0;
+        _serialQueue = dispatch_queue_create("download.ui", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -40,9 +41,11 @@
     _title = title;
     if (_cell) {
         __weak __typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.cell.titleLabel.text = title;
-        });
+        //dispatch_sync(_serialQueue, ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.cell.titleLabel.text = title;
+            });
+        //});
     }
 }
 
@@ -50,11 +53,11 @@
     _progress = progress;
     if (_cell) {
         __weak __typeof(self) weakSelf = self;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.cell.progressView.progress = progress;
-        });
-        
+        //dispatch_sync(_serialQueue, ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.cell.progressView.progress = progress;
+            });
+        //});
     }
 }
 
@@ -62,16 +65,21 @@
     _progressString = progressString;
     if (_cell) {
         __weak __typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.cell.progressLabel.text = progressString;
-        });
-        
+        //dispatch_sync(_serialQueue, ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.cell.progressLabel.text = progressString;
+            });
+        //});
     }
 }
 
 - (void)progressDidUpdate:(NSUInteger)currentSize total:(NSUInteger)totalSize {
-    self.progressString = [NSString stringWithFormat:@"%ld/%ld", currentSize, totalSize];
-    self.progress = currentSize / totalSize;
+    //if (totalSize * _progress < currentSize) {
+        self.progressString = [NSString stringWithFormat:@"%ld/%ld", currentSize, totalSize];
+        self.	progress = currentSize / totalSize;
+    //}
+    
+    
 }
 
 - (void)downloadFinish:(NSString *)filePath {

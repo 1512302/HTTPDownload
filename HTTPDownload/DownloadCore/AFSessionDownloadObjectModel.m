@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AFSessionDownloadObjectModel.h"
 
+@interface AFSessionDownloadObjectModel()
+
+@property (atomic) dispatch_queue_t serialQueue;
+
+@end
+
 @implementation AFSessionDownloadObjectModel
 
 - (instancetype)init {
@@ -17,6 +23,7 @@
         _configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         _managerTaskDownload = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:self.configuration];
         _managerTaskDownload.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _serialQueue = dispatch_queue_create("download.manager", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -37,7 +44,7 @@
         
         downloadTaskModel = [[DownloadTaskModel alloc] initWithTask:downloadTask];
         [_managerTaskDownload setDownloadTaskDidWriteDataBlock:^(NSURLSession * _Nonnull session, NSURLSessionDownloadTask * _Nonnull downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-            [downloadTaskModel.delegate progressDidUpdate:bytesWritten total:totalBytesWritten];
+                [downloadTaskModel.delegate progressDidUpdate:totalBytesWritten total:totalBytesExpectedToWrite];
         }];
     }
     return downloadTaskModel;
