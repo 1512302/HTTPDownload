@@ -10,4 +10,24 @@
 
 @implementation DownloadObjectModel
 
+- (void)pause {
+    
+}
+
+- (void)resume {
+    
+}
+
+- (void)cancel {
+    
+}
+
+- (void)setBackgroundDownload:(BOOL)agree {
+    
+}
+
+- (void)updatePriority:(DowloadPriority)priority {
+    
+}
+
 @end

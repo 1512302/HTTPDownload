@@ -8,6 +8,8 @@
 
 #import "TableViewCellModel.h"
 
+@class DownloadTableViewObject;
+
 @interface DownloadTableViewCell : TableViewCellModel
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -15,5 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+
+@property (strong, nonatomic) NSIndexPath *indexPath;
+
+@property (weak, nonatomic, readwrite) DownloadTableViewObject *cellObject;
 
 @end

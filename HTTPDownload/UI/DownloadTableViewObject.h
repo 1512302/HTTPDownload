@@ -7,8 +7,11 @@
 //
 
 #import "CellObjectModel.h"
+#import "DownloadObjectModel.h"
 
-@interface DownloadTableViewObject : CellObjectModel
+@class DownloadTableViewCell;
+
+@interface DownloadTableViewObject : CellObjectModel <DownloadObjectDelegate>
 
 @property (readwrite, nonatomic, strong) NSString *title;
 
@@ -17,6 +20,10 @@
 @property (readwrite, nonatomic) float progress;
 
 @property (readwrite, nonatomic) BOOL isPersen;
+
+@property (readwrite, nonatomic, weak) DownloadTableViewCell *cell;
+
+@property (readwrite, nonatomic, strong) DownloadObjectModel *downloadManager;
 
 - (instancetype)init;
 

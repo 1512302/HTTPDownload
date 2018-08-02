@@ -10,6 +10,12 @@
 
 @implementation DownloadManagerModel
 
+- (BOOL)checkURL:(NSString *)url {
+    return false;
+}
 
+- (void)downloadWithURL:(NSString *)url completion:(void (^)(DownloadObjectModel *downloadObject, NSError *error))completionBlock {
+
+}
 
 @end

@@ -8,6 +8,12 @@
 
 #import "DownloadTableView.h"
 #import "TableViewCellModel.h"
+#import "InfomationTableViewObject.h"
+
+@interface DownloadTableView()
+
+@property (strong, nonatomic) InfomationTableViewObject *infoObject;
+@end
 
 @implementation DownloadTableView
 
@@ -20,16 +26,16 @@
     self.dataSource = self;
     self.delegate = self;
     
-    if (!_cellObjects || _cellObjects.count == 0) {
-        if (!_cellObjects) {
-            _cellObjects = [NSMutableArray new];
-        }
-        InfomationTableViewObject *infoObject = [[InfomationTableViewObject alloc] initWithMessange:@"History download empty"];
-        [_cellObjects addObject:infoObject];
-        _error = [NSError errorWithDomain:DownloadErrorDomain code:DownloadErrorCodeEmpty userInfo:nil];
+    if (!_cellObjects) {
+        _cellObjects = [NSMutableArray new];
     }
-   
-    [self reloadData];
+    if (_cellObjects.count == 0) {
+        _error = [NSError errorWithDomain:DownloadErrorDomain code:DownloadErrorCodeEmpty userInfo:nil];
+        [self errorCellWillDisplay];
+    }
+    else {
+        [self reloadData];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,20 +61,55 @@
 }
 
 - (void)addCell:(CellObjectModel *)cellObject {
-    if (_error) {
-        if (_error.code == DownloadErrorCodeEmpty) {
-            _error = nil;
-            [_cellObjects removeAllObjects];
-        }
-        [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationMiddle];
-    }
-    
     if (cellObject) {
         [_cellObjects insertObject:cellObject atIndex:0];
     }
     [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationMiddle];
     
+    if (_error) {
+        if (_error.code == DownloadErrorCodeEmpty) {
+            _error = nil;
+            [self removeCell:_infoObject];
+        }
+    }
+    
     
 }
 
+- (void)removeCell:(CellObjectModel *)cellObject {
+    NSUInteger index = [_cellObjects indexOfObject:cellObject];
+    NSLog(@"Index Loc: %ld", index);
+    if (index < _cellObjects.count) {
+        [_cellObjects removeObjectAtIndex:index];
+        [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];
+        if (_cellObjects.count == 0) {
+            _error = [NSError errorWithDomain:DownloadErrorDomain code:DownloadErrorCodeEmpty userInfo:nil];
+            [self errorCellWillDisplay];
+        }
+    } else {
+        
+    }
+}
+
+
+- (void)errorCellWillDisplay {
+    if (!_error) {
+        return;
+    }
+    if (!_infoObject) {
+       _infoObject = [InfomationTableViewObject new];
+    }
+    
+    switch (_error.code) {
+        case DownloadErrorCodeEmpty:
+            _infoObject.messange = @"History download is empty";
+            break;
+        default:
+            _infoObject.messange = [NSString stringWithFormat:@"Error: %ld", _error.code];
+            break;
+    }
+    
+    [_cellObjects insertObject:_infoObject atIndex:0];
+    [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+}
 @end

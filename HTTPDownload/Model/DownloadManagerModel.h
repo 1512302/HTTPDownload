@@ -10,14 +10,14 @@
 #import "DownloadObjectModel.h"
 
 typedef enum {
-    DowloadPriorityHight,
-    DowloadPriorityMedium,
-    DowloadPriorityLow
-} DowloadPriority;
+    URLNil,
+    URLUndefined,
+} URLErrorCode;
 
 @interface DownloadManagerModel : NSObject
 
 - (BOOL)checkURL:(NSString *)url;
 
 - (void)downloadWithURL:(NSString *)url completion:(void (^)(DownloadObjectModel *downloadObject, NSError *error))completionBlock;
+
 @end

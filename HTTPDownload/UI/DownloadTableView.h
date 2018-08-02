@@ -7,9 +7,11 @@
 //
 
 #import "TableViewModel.h"
-#import "InfomationTableViewObject.h"
+
+@class CellObjectModel;
 
 typedef NS_ENUM(NSUInteger, DownloadErrorCode) {
+    DownloadErrorCodeNone = 0,
     DownloadErrorCodeEmpty = 100,
     DownloadErrorCodeUnknow
 };
@@ -24,5 +26,7 @@ static NSString *const DownloadErrorDomain = @"com.download.contact";
 @property (nonatomic, readwrite) NSError *error;
 
 - (void)addCell:(CellObjectModel *)cellObject;
+
+- (void)removeCell:(CellObjectModel *)cellObject;
 
 @end

@@ -8,14 +8,45 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    DowloadPriorityHight,
+    DowloadPriorityMedium,
+    DowloadPriorityLow
+} DowloadPriority;
+
+@protocol DownloadObjectDelegate
+
+@optional
+
+/**
+ Được gọi mỗi khi tiến dộ cập nhật
+
+ @param currentSize dung lượng đã tải (byte)
+ @param totalSize dung lượng tổng (byte)
+ */
+- (void)progressDidUpdate:(NSUInteger)currentSize total:(NSUInteger)totalSize;
+
+/**
+ Được gọi khi tải hoàn tất
+
+ @param filePath đường dẫn đến vị trí lưu
+ */
+- (void)downloadFinish:(NSString *)filePath;
+
+@end
+
 @interface DownloadObjectModel : NSObject
 
-@property (readonly, nonatomic, strong) NSString *url;
+@property (retain, nonatomic) id<DownloadObjectDelegate> delegate;
 
-@property (readonly, nonatomic, strong) NSString *title;
+- (void)pause;
 
-- (Float32)progress;
+- (void)resume;
 
+- (void)cancel;
 
+- (void)setBackgroundDownload:(BOOL)agree;
+
+- (void)updatePriority:(DowloadPriority)priority;
 
 @end
