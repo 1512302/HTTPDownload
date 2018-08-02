@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "DownloadTableView.h"
-#import "DownloadInputView.h"
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic, readonly) DownloadTableView *downloadTableView;
+@property (weak, nonatomic) IBOutlet DownloadTableView *downloadTableView;
 
-@property (strong, nonatomic, readonly) DownloadInputView *downloadInputView;
+@property (weak, nonatomic) IBOutlet UITextField *urlInputTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 
 @end
 

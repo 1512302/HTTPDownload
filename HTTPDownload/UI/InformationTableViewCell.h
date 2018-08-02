@@ -6,9 +6,9 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TableViewCellModel.h"
 
-@interface InformationTableViewCell : UITableViewCell
+@interface InformationTableViewCell : TableViewCellModel
 
 @property (weak, nonatomic) IBOutlet UILabel *messange;
 

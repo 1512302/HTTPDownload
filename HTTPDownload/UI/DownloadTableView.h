@@ -6,12 +6,23 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TableViewModel.h"
+#import "InfomationTableViewObject.h"
 
-@interface DownloadTableView : UITableView <UITableViewDataSource>
+typedef NS_ENUM(NSUInteger, DownloadErrorCode) {
+    DownloadErrorCodeEmpty = 100,
+    DownloadErrorCodeUnknow
+};
 
-@property (strong, nonatomic, readonly) NSMutableArray *downloadArray;
+static NSString *const DownloadErrorDomain = @"com.download.contact";
 
 
+@interface DownloadTableView : TableViewModel
+
+@property (strong, nonatomic, readwrite) NSMutableArray *downloadArray;
+
+@property (nonatomic, readwrite) NSError *error;
+
+- (void)addCell:(CellObjectModel *)cellObject;
 
 @end

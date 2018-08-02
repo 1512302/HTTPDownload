@@ -6,18 +6,14 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TableViewCellModel.h"
 
-@interface DownloadTableViewCell : UITableViewCell
+@interface DownloadTableViewCell : TableViewCellModel
 
-@property (strong, nonatomic, readwrite) UILabel *nameFileLable;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property (strong, nonatomic, readwrite) UIButton *resumeDownloadButton;
+@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 
-@property (strong, nonatomic, readwrite) UIButton *pauseDownloadButton;
-
-@property (strong, nonatomic, readwrite) UIButton *cancelDownloadButton;
-
-@property (strong, nonatomic, readwrite) UIProgressView *downloadProgressView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end

@@ -6,12 +6,18 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CellObjectModel.h"
 
-@interface DownloadTableViewObject : NSObject
+@interface DownloadTableViewObject : CellObjectModel
 
 @property (readwrite, nonatomic, strong) NSString *title;
 
-@property (readwrite, nonatomic, strong)
+@property (readwrite, nonatomic, strong) NSString *progressString;
+
+@property (readwrite, nonatomic) float progress;
+
+@property (readwrite, nonatomic) BOOL isPersen;
+
+- (instancetype)init;
 
 @end

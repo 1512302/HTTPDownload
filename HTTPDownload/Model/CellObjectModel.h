@@ -12,4 +12,6 @@
 
 - (Class)cellClass;
 
+- (NSUInteger)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

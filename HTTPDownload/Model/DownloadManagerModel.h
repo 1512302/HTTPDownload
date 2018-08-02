@@ -20,7 +20,4 @@ typedef enum {
 - (BOOL)checkURL:(NSString *)url;
 
 - (void)downloadWithURL:(NSString *)url completion:(void (^)(DownloadObjectModel *downloadObject, NSError *error))completionBlock;
-
-- (void)update:(DownloadObjectModel *)downloadObject toPriority:(DowloadPriority)priority;
-
 @end

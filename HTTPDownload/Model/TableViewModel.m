@@ -7,6 +7,8 @@
 //
 
 #import "TableViewModel.h"
+#import "CellObjectModel.h"
+#import "TableViewCellModel.h"
 
 @implementation TableViewModel
 
@@ -18,21 +20,33 @@
 }
 */
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.dataSource = self;
-    }
-    return self;
+- (void)setCellObjects:(NSMutableArray *)cellObjects {
+    _cellObjects = cellObjects;
+    self.dataSource = self;
+    self.delegate = self;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    CellObjectModel *cellObject = _cellObjects[indexPath.row];
+    Class cellClass = [cellObject cellClass];
+    if ([cellClass isSubclassOfClass
+         :[TableViewCellModel class]]) {
+        TableViewCellModel *cell = [cellClass tableView:tableView cellForRowAtIndexPath:indexPath];
+        if (cell) {
+            [cell shouldUpdateWithObject:cellObject];
+            return cell;
+        }
+    }
+    return [UITableViewCell new];
 }
 
-- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_cellObjects count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CellObjectModel *cellObject = _cellObjects[indexPath.row];
+    return [cellObject tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 @end

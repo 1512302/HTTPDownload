@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewModel : UITableView <UITableViewDataSource>
+@interface TableViewModel : UITableView <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic, readonly) NSMutableArray *cellObjects;
+@property (strong, nonatomic, readwrite) NSMutableArray *cellObjects;
 
 @end

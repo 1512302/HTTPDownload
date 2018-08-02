@@ -7,6 +7,7 @@
 //
 
 #import "InformationTableViewCell.h"
+#import "InfomationTableViewObject.h"
 
 @implementation InformationTableViewCell
 
@@ -19,6 +20,20 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
++ (TableViewCellModel *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TableViewCellModel *cell = [tableView dequeueReusableCellWithIdentifier:@"InformationTableViewCell"];
+    return cell;
+}
+
+- (BOOL)shouldUpdateWithObject:(id)anObject {
+    if (![anObject isKindOfClass:[InfomationTableViewObject class]]) {
+        return false;
+    }
+    InfomationTableViewObject *object = anObject;
+    _messange.text = object.messange;
+    return true;
 }
 
 @end
