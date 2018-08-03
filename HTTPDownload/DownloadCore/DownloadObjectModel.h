@@ -1,12 +1,13 @@
 //
 //  DownloadObjectModel.h
-//  HTTPDownload
+//  DownloadManager
 //
-//  Created by CPU11367 on 7/31/18.
-//  Copyright © 2018 CPU11367. All rights reserved.
+//  Created by CPU11829 on 8/3/18.
+//  Copyright © 2018 CPU11829. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "DownloadObjectDelegate.h"
 
 typedef enum {
     DowloadPriorityHight,
@@ -14,28 +15,9 @@ typedef enum {
     DowloadPriorityLow
 } DowloadPriority;
 
-@protocol DownloadObjectDelegate
-
-@optional
-
-/**
- Được gọi mỗi khi tiến dộ cập nhật
-
- @param currentSize dung lượng đã tải (byte)
- @param totalSize dung lượng tổng (byte)
- */
-- (void)progressDidUpdate:(NSUInteger)currentSize total:(NSUInteger)totalSize;
-
-/**
- Được gọi khi tải hoàn tất
-
- @param filePath đường dẫn đến vị trí lưu
- */
-- (void)downloadFinish:(NSString *)filePath;
-
-@end
-
 @interface DownloadObjectModel : NSObject
+
+@property (nonatomic) DowloadPriority priority;
 
 @property (retain, nonatomic) id<DownloadObjectDelegate> delegate;
 
@@ -45,8 +27,7 @@ typedef enum {
 
 - (void)cancel;
 
-- (void)setBackgroundDownload:(BOOL)agree;
-
 - (void)updatePriority:(DowloadPriority)priority;
+
 
 @end

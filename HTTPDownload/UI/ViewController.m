@@ -8,11 +8,11 @@
 
 #import "ViewController.h"
 #import "DownloadTableViewObject.h"
-#import "AFDownloadManager.h"
+#import "DownloadManager.h"
 
 @interface ViewController ()
 
-@property (strong, nonatomic) DownloadManagerModel *downloadManager;
+@property (strong, nonatomic) DownloadManager *downloadManager;
 
 @end
 
@@ -33,7 +33,7 @@
 }
 
 - (void)loadCore {
-    _downloadManager = [AFDownloadManager new];
+    _downloadManager = [DownloadManager new];
 }
 
 - (void)loadData {
@@ -51,10 +51,10 @@
     if (url.length > 0) {
         DownloadTableViewObject *cellObject = [DownloadTableViewObject new];
         cellObject.title = url;
-        cellObject.progressString = @"Pending";
+        cellObject.progressString = @"Pending...";
         [_downloadTableView addCell:cellObject];
         
-        [_downloadManager downloadWithURL:url completion:^(DownloadObjectModel *downloadObject, NSError *error) {
+        [_downloadManager downloadWithURLString:url completion:^(DownloadObjectModel *downloadObject, NSError *error) {
             cellObject.downloadManager = downloadObject;
             downloadObject.delegate = cellObject;
         }];

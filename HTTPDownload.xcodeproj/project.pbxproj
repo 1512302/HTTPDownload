@@ -8,13 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E6B139EACEFC9DE4B08F941 /* libPods-HTTPDownload.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B5CC1ECB17262C5892B324 /* libPods-HTTPDownload.a */; };
-		9317F12721131750002B4B76 /* AFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9317F12621131750002B4B76 /* AFDownloadManager.m */; };
-		9317F12E211317DF002B4B76 /* DownloadTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9317F12A211317DE002B4B76 /* DownloadTaskModel.m */; };
-		9317F12F211317DF002B4B76 /* AFSessionDownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9317F12D211317DF002B4B76 /* AFSessionDownloadObjectModel.m */; };
-		9317F13221131992002B4B76 /* SessionObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9317F13121131992002B4B76 /* SessionObjectModel.m */; };
 		9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */; };
-		9374CEAA210F9E34004C6C9B /* DownloadManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */; };
-		9374CEAD210F9F6C004C6C9B /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */; };
 		93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26642110426000CE3D5A /* DownloadTableView.m */; };
 		93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26672110438000CE3D5A /* DownloadTableViewObject.m */; };
 		93AB26722110D69800CE3D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB26712110D69800CE3D5A /* Main.storyboard */; };
@@ -23,6 +17,11 @@
 		93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267A2111563F00CE3D5A /* CellObjectModel.m */; };
 		93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267D2111599200CE3D5A /* TableViewCellModel.m */; };
 		93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */; };
+		93D94063211407A100C7F031 /* AFSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D940582114079F00C7F031 /* AFSession.m */; };
+		93D94064211407A100C7F031 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9405A2114079F00C7F031 /* DownloadManager.m */; };
+		93D94065211407A100C7F031 /* DownloadFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9405D2114079F00C7F031 /* DownloadFactory.m */; };
+		93D94066211407A100C7F031 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D94060211407A000C7F031 /* DownloadTask.m */; };
+		93D94067211407A100C7F031 /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D94062211407A000C7F031 /* DownloadObjectModel.m */; };
 		93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8E9210EF92900CFA398 /* AppDelegate.m */; };
 		93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8EC210EF92900CFA398 /* ViewController.m */; };
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
@@ -33,20 +32,8 @@
 /* Begin PBXFileReference section */
 		02B5CC1ECB17262C5892B324 /* libPods-HTTPDownload.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTTPDownload.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06135C299DFEDA535AA45CE9 /* Pods-HTTPDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPDownload/Pods-HTTPDownload.release.xcconfig"; sourceTree = "<group>"; };
-		9317F12521131750002B4B76 /* AFDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFDownloadManager.h; sourceTree = "<group>"; };
-		9317F12621131750002B4B76 /* AFDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFDownloadManager.m; sourceTree = "<group>"; };
-		9317F129211317DE002B4B76 /* DownloadTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTaskModel.h; sourceTree = "<group>"; };
-		9317F12A211317DE002B4B76 /* DownloadTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTaskModel.m; sourceTree = "<group>"; };
-		9317F12B211317DF002B4B76 /* AFSessionDownloadObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSessionDownloadObjectModel.h; sourceTree = "<group>"; };
-		9317F12C211317DF002B4B76 /* SessionObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionObjectModel.h; sourceTree = "<group>"; };
-		9317F12D211317DF002B4B76 /* AFSessionDownloadObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSessionDownloadObjectModel.m; sourceTree = "<group>"; };
-		9317F13121131992002B4B76 /* SessionObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionObjectModel.m; sourceTree = "<group>"; };
 		9374CEA4210F0F93004C6C9B /* DownloadTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
 		9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
-		9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManagerModel.h; sourceTree = "<group>"; };
-		9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerModel.m; sourceTree = "<group>"; };
-		9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
-		9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
 		93AB26632110426000CE3D5A /* DownloadTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableView.h; sourceTree = "<group>"; };
 		93AB26642110426000CE3D5A /* DownloadTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableView.m; sourceTree = "<group>"; };
 		93AB26662110438000CE3D5A /* DownloadTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewObject.h; sourceTree = "<group>"; };
@@ -62,6 +49,17 @@
 		93AB267D2111599200CE3D5A /* TableViewCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellModel.m; sourceTree = "<group>"; };
 		93AB267F2111647F00CE3D5A /* InfomationTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfomationTableViewObject.h; sourceTree = "<group>"; };
 		93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfomationTableViewObject.m; sourceTree = "<group>"; };
+		93D940582114079F00C7F031 /* AFSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSession.m; sourceTree = "<group>"; };
+		93D940592114079F00C7F031 /* DownloadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFactory.h; sourceTree = "<group>"; };
+		93D9405A2114079F00C7F031 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		93D9405B2114079F00C7F031 /* DownloadObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectDelegate.h; sourceTree = "<group>"; };
+		93D9405C2114079F00C7F031 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		93D9405D2114079F00C7F031 /* DownloadFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFactory.m; sourceTree = "<group>"; };
+		93D9405E211407A000C7F031 /* DownloadObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
+		93D9405F211407A000C7F031 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
+		93D94060211407A000C7F031 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
+		93D94061211407A000C7F031 /* AFSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSession.h; sourceTree = "<group>"; };
+		93D94062211407A000C7F031 /* DownloadObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
 		93DEB8E5210EF92900CFA398 /* HTTPDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEB8E8210EF92900CFA398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93DEB8E9210EF92900CFA398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,18 +96,17 @@
 		9317F124211314FC002B4B76 /* DownloadCore */ = {
 			isa = PBXGroup;
 			children = (
-				9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */,
-				9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */,
-				9317F12521131750002B4B76 /* AFDownloadManager.h */,
-				9317F12621131750002B4B76 /* AFDownloadManager.m */,
-				9317F12B211317DF002B4B76 /* AFSessionDownloadObjectModel.h */,
-				9317F12D211317DF002B4B76 /* AFSessionDownloadObjectModel.m */,
-				9317F129211317DE002B4B76 /* DownloadTaskModel.h */,
-				9317F12A211317DE002B4B76 /* DownloadTaskModel.m */,
-				9317F12C211317DF002B4B76 /* SessionObjectModel.h */,
-				9317F13121131992002B4B76 /* SessionObjectModel.m */,
-				9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */,
-				9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */,
+				93D94061211407A000C7F031 /* AFSession.h */,
+				93D940582114079F00C7F031 /* AFSession.m */,
+				93D940592114079F00C7F031 /* DownloadFactory.h */,
+				93D9405D2114079F00C7F031 /* DownloadFactory.m */,
+				93D9405C2114079F00C7F031 /* DownloadManager.h */,
+				93D9405A2114079F00C7F031 /* DownloadManager.m */,
+				93D9405B2114079F00C7F031 /* DownloadObjectDelegate.h */,
+				93D9405E211407A000C7F031 /* DownloadObjectModel.h */,
+				93D94062211407A000C7F031 /* DownloadObjectModel.m */,
+				93D9405F211407A000C7F031 /* DownloadTask.h */,
+				93D94060211407A000C7F031 /* DownloadTask.m */,
 			);
 			path = DownloadCore;
 			sourceTree = "<group>";
@@ -289,21 +286,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9374CEAA210F9E34004C6C9B /* DownloadManagerModel.m in Sources */,
-				9317F13221131992002B4B76 /* SessionObjectModel.m in Sources */,
+				93D94067211407A100C7F031 /* DownloadObjectModel.m in Sources */,
 				93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */,
+				93D94063211407A100C7F031 /* AFSession.m in Sources */,
 				93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */,
 				93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */,
-				9317F12F211317DF002B4B76 /* AFSessionDownloadObjectModel.m in Sources */,
-				9317F12E211317DF002B4B76 /* DownloadTaskModel.m in Sources */,
+				93D94066211407A100C7F031 /* DownloadTask.m in Sources */,
+				93D94064211407A100C7F031 /* DownloadManager.m in Sources */,
 				93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */,
 				93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */,
 				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
+				93D94065211407A100C7F031 /* DownloadFactory.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
-				9317F12721131750002B4B76 /* AFDownloadManager.m in Sources */,
 				93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */,
 				93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */,
-				9374CEAD210F9F6C004C6C9B /* DownloadObjectModel.m in Sources */,
 				93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */,
 				93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */,
 			);

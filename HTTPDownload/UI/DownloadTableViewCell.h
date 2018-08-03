@@ -22,4 +22,6 @@
 
 @property (weak, nonatomic, readwrite) DownloadTableViewObject *cellObject;
 
+- (void)updateState;
+
 @end

@@ -51,6 +51,7 @@
     }
     object.cell = self;
     self.cellObject = object;
+    [self updateState];
     return true;
 }
 
@@ -79,17 +80,46 @@
 }
 
 - (IBAction)pauseButtonTouch:(id)sender {
+    [_cellObject pause];
+}
+
+- (IBAction)resumeButtonTouch:(id)sender {
+    [_cellObject resume];
+}
+
+- (void)updateState {
+    if (_cellObject) {
+        switch (_cellObject.state) {
+            case DownloadStateDownloading:
+                [self resumeState];
+                break;
+            case DownloadStatePause:
+                [self pauseState];
+                break;
+            case DownloadStateComplete:
+                [_progressView setHidden:YES];
+            default:
+                [self noDownloadState];
+                break;
+        }
+        self.backgroundColor = [_cellObject getColorBackgroud];
+    }
     
 }
 
-
-
-- (IBAction)resumeButtonTouch:(id)sender {
-    _progressView.progress += 0.05;
-    [_cellObject.downloadManager resume];
+- (void)pauseState {
+    [_pauseButton setHidden:YES];
+    [_resumeButton setHidden:NO];
 }
 
+- (void)resumeState {
+    [_pauseButton setHidden:NO];
+    [_resumeButton setHidden:YES];
+}
 
-
+- (void)noDownloadState {
+    [_resumeButton setHidden:YES];
+    [_pauseButton setHidden:YES];
+}
 
 @end

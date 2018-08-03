@@ -78,7 +78,6 @@
 
 - (void)removeCell:(CellObjectModel *)cellObject {
     NSUInteger index = [_cellObjects indexOfObject:cellObject];
-    NSLog(@"Index Loc: %ld", index);
     if (index < _cellObjects.count) {
         [_cellObjects removeObjectAtIndex:index];
         [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];

@@ -1,5 +1,5 @@
 //
-//  DownloadObjectModel.m
+//  DownloadTask.h
 //  DownloadManager
 //
 //  Created by CPU11829 on 8/3/18.
@@ -9,14 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "DownloadObjectModel.h"
 
-@implementation DownloadObjectModel
+@interface DownloadTask : DownloadObjectModel
 
-- (void)pause {}
+@property (nonatomic) NSURLSessionDownloadTask* downloadTask;
 
-- (void)resume {}
-
-- (void)cancel {}
-
-- (void)updatePriority:(DowloadPriority)priority {}
+- (instancetype)initWithTask:(NSURLSessionDownloadTask*)task;
 
 @end
