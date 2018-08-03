@@ -12,6 +12,12 @@
 
 @interface DownloadTableViewCell()
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *resumeButton;
+
 @end
 
 @implementation DownloadTableViewCell
@@ -56,27 +62,31 @@
     }
     DownloadTableView *tableView = view;
     
-    [tableView removeCell:self.cellObject];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Cancel" message:@"Do you want cancel download this file?" preferredStyle:UIAlertControllerStyleAlert];
     
-//    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Cancel" message:@"Do you want cancel download this file?" preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction* exitAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-//        [tableView removeCell:self.cellObject];
-//    }];
-//    
-//    UIAlertAction* comebackAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-//    
-//    [alert addAction:exitAction];
-//    [alert addAction:comebackAction];
-//    UIViewController *viewCotroller = [UIApplication sharedApplication].windows[0].rootViewController;
-//    [viewCotroller presentViewController:alert animated:YES completion:nil];
+    __weak __typeof(self) weakSelf = self;
+    UIAlertAction* exitAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [weakSelf.cellObject.downloadManager cancel];
+        [tableView removeCell:self.cellObject];
+    }];
+    
+    UIAlertAction* comebackAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:exitAction];
+    [alert addAction:comebackAction];
+    UIViewController *viewCotroller = [UIApplication sharedApplication].windows[0].rootViewController;
+    [viewCotroller presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)pauseButtonTouch:(id)sender {
+    
 }
 
 
 
 - (IBAction)resumeButtonTouch:(id)sender {
     _progressView.progress += 0.05;
-    
+    [_cellObject.downloadManager resume];
 }
 
 

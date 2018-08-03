@@ -98,6 +98,8 @@
 		9317F124211314FC002B4B76 /* DownloadCore */ = {
 			isa = PBXGroup;
 			children = (
+				9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */,
+				9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */,
 				9317F12521131750002B4B76 /* AFDownloadManager.h */,
 				9317F12621131750002B4B76 /* AFDownloadManager.m */,
 				9317F12B211317DF002B4B76 /* AFSessionDownloadObjectModel.h */,
@@ -106,6 +108,8 @@
 				9317F12A211317DE002B4B76 /* DownloadTaskModel.m */,
 				9317F12C211317DF002B4B76 /* SessionObjectModel.h */,
 				9317F13121131992002B4B76 /* SessionObjectModel.m */,
+				9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */,
+				9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */,
 			);
 			path = DownloadCore;
 			sourceTree = "<group>";
@@ -132,10 +136,6 @@
 		9374CEA7210F9B52004C6C9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9374CEA8210F9E34004C6C9B /* DownloadManagerModel.h */,
-				9374CEA9210F9E34004C6C9B /* DownloadManagerModel.m */,
-				9374CEAB210F9F6C004C6C9B /* DownloadObjectModel.h */,
-				9374CEAC210F9F6C004C6C9B /* DownloadObjectModel.m */,
 				93AB2676211155A000CE3D5A /* TableViewModel.h */,
 				93AB2677211155A000CE3D5A /* TableViewModel.m */,
 				93AB26792111563F00CE3D5A /* CellObjectModel.h */,

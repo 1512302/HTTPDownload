@@ -107,6 +107,9 @@
                                                                             <rect key="frame" x="275" y="0.0" width="30" height="30"/>
                                                                             <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                                             <state key="normal" title="II" image="pause"/>
+                                                                            <connections>
+                                                                                <action selector="pauseButtonTouch:" destination="7Zf-wx-rAz" eventType="touchUpInside" id="3Lu-cy-e3K"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-7P-nIh">
                                                                             <rect key="frame" x="305" y="0.0" width="30" height="30"/>
@@ -153,8 +156,11 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="cancelButton" destination="3Ma-7P-nIh" id="eCc-hr-nRq"/>
+                                                    <outlet property="pauseButton" destination="6KB-Yy-XmK" id="hmC-WS-tzI"/>
                                                     <outlet property="progressLabel" destination="9sJ-SU-faA" id="45J-nw-yl3"/>
                                                     <outlet property="progressView" destination="kFn-hC-p9L" id="Y6v-Nv-XtI"/>
+                                                    <outlet property="resumeButton" destination="yUl-7n-Z2Y" id="QbD-hT-RH9"/>
                                                     <outlet property="titleLabel" destination="eRL-IS-B2a" id="MGg-k2-usY"/>
                                                 </connections>
                                             </tableViewCell>

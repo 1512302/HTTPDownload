@@ -29,7 +29,7 @@
 }
 
 - (DownloadTaskModel*)downloadTaskWithURLString:(NSString *)URLString {
-    DownloadTaskModel* downloadTaskModel;
+    DownloadTaskModel* downloadTaskModel = [DownloadTaskModel new];
     if (_managerTaskDownload && URLString) {
         NSURLSessionDownloadTask* downloadTask;
         NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
