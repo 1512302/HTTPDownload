@@ -62,4 +62,10 @@
     }
 }
 
+- (int)numberTaskIsDownloading{
+    int numberTaskIsDownloading = self.managerTaskDownload.operationQueue.operationCount;
+    return numberTaskIsDownloading;
+}
+
+
 @end

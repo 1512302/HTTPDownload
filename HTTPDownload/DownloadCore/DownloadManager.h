@@ -32,4 +32,6 @@ typedef enum {
 
 - (void)setDownloadFinishBlock:(void(^)(NSString* filePath))block;
 
++ (int)LIMIT_TASK;
+
 @end

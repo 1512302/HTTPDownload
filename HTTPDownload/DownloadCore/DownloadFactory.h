@@ -20,4 +20,6 @@
 
 - (void)setDownloadFinishBlock:(void(^)(NSString* filePath))block;
 
+- (int)numberTaskIsDownloading;
+
 @end

@@ -8,6 +8,11 @@
 
 #import "DownloadManager.h"
 #import "AFSession.h"
+#import "PriorityQueue.h"
+
+@interface DownloadManager()
+@property (nonatomic, strong) PriorityQueue* priorityQueue;
+@end
 
 @implementation DownloadManager
 
@@ -15,38 +20,51 @@
     self = [super init];
     if (self) {
         _factory = [[AFSession alloc] init];
+        _priorityQueue = [[PriorityQueue alloc] init];
     }
     return self;
 }
 
-- (BOOL)checkURL:(NSString *)url {
-    return true;
+//- (BOOL)checkURL:(NSString *)url {
+//    return true;
+//}
+
++ (int)LIMIT_TASK{
+    return 10;
 }
+
 
 - (void)downloadWithURLString:(NSString *)url completion:(void (^)(DownloadObjectModel *, NSError *))completion {
     if (completion) {
         if (!_factory) {
-            completion(nil, [NSError errorWithDomain:@"factoryError" code:FactoryNil userInfo:nil]);
+            if(completion){
+                completion(nil, [NSError errorWithDomain:@"factoryError" code:FactoryNil userInfo:nil]);
+            }
         }
         else if (!url) {
-            completion(nil, [NSError errorWithDomain:@"downloadError" code:URLNil userInfo:nil]);
+            if(completion){
+                completion(nil, [NSError errorWithDomain:@"downloadError" code:URLNil userInfo:nil]);
+            }
         }
         else if (![self checkURL:url]) {
-            completion(nil, [NSError errorWithDomain:@"downloadError" code:URLError userInfo:@{@"url": url}]);
+            if(completion){
+                completion(nil, [NSError errorWithDomain:@"downloadError" code:URLError userInfo:@{@"url": url}]);
+            }
         }
         else {
-            
-            
-            
-            
-            //
-            DownloadObjectModel* downloadObject = [_factory downloadObjectWithURLString:url];
-            if (!downloadObject) {
-                completion(nil, [NSError errorWithDomain:@"factoryError" code:FactoryError userInfo:nil]);
-            }
-            else {
-                completion(downloadObject, nil);
-                [downloadObject resume];
+            [self.priorityQueue push:url withPriority:5];
+            if([self.factory numberTaskIsDownloading] < [DownloadManager LIMIT_TASK]){
+                NSString* urlFromQueue = [self.priorityQueue pop];
+                if(urlFromQueue){
+                    DownloadObjectModel* downloadObject = [self.factory downloadObjectWithURLString:urlFromQueue];
+                    if (!downloadObject) {
+                        completion(nil, [NSError errorWithDomain:@"factoryError" code:FactoryError userInfo:nil]);
+                    }
+                    else {
+                        completion(downloadObject, nil);
+                        [downloadObject resume];
+                    }
+                }
             }
         }
     }
