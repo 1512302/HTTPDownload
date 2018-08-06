@@ -16,7 +16,7 @@
 		93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2677211155A000CE3D5A /* TableViewModel.m */; };
 		93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267A2111563F00CE3D5A /* CellObjectModel.m */; };
 		93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267D2111599200CE3D5A /* TableViewCellModel.m */; };
-		93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */; };
+		93AB26812111647F00CE3D5A /* InfomationCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26802111647F00CE3D5A /* InfomationCellObject.m */; };
 		93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8E9210EF92900CFA398 /* AppDelegate.m */; };
 		93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8EC210EF92900CFA398 /* ViewController.m */; };
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
@@ -47,8 +47,8 @@
 		93AB267A2111563F00CE3D5A /* CellObjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellObjectModel.m; sourceTree = "<group>"; };
 		93AB267C2111599200CE3D5A /* TableViewCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellModel.h; sourceTree = "<group>"; };
 		93AB267D2111599200CE3D5A /* TableViewCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellModel.m; sourceTree = "<group>"; };
-		93AB267F2111647F00CE3D5A /* InfomationTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfomationTableViewObject.h; sourceTree = "<group>"; };
-		93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfomationTableViewObject.m; sourceTree = "<group>"; };
+		93AB267F2111647F00CE3D5A /* InfomationCellObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfomationCellObject.h; sourceTree = "<group>"; };
+		93AB26802111647F00CE3D5A /* InfomationCellObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfomationCellObject.m; sourceTree = "<group>"; };
 		93DEB8E5210EF92900CFA398 /* HTTPDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEB8E8210EF92900CFA398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93DEB8E9210EF92900CFA398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 				93AB26672110438000CE3D5A /* DownloadCellObject.m */,
 				9374CEA4210F0F93004C6C9B /* DownloadTableViewCell.h */,
 				9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */,
-				93AB267F2111647F00CE3D5A /* InfomationTableViewObject.h */,
-				93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */,
+				93AB267F2111647F00CE3D5A /* InfomationCellObject.h */,
+				93AB26802111647F00CE3D5A /* InfomationCellObject.m */,
 				93AB2673211150B100CE3D5A /* InformationTableViewCell.h */,
 				93AB2674211150B100CE3D5A /* InformationTableViewCell.m */,
 			);
@@ -296,7 +296,7 @@
 				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
 				93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */,
-				93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */,
+				93AB26812111647F00CE3D5A /* InfomationCellObject.m in Sources */,
 				93AB26682110438000CE3D5A /* DownloadCellObject.m in Sources */,
 				93EB97DD2118385B002C24C7 /* DownloadObjectModel.m in Sources */,
 				93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */,

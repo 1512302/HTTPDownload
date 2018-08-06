@@ -7,7 +7,7 @@
 //
 
 #import "InformationTableViewCell.h"
-#import "InfomationTableViewObject.h"
+#import "InfomationCellObject.h"
 
 @implementation InformationTableViewCell
 
@@ -28,10 +28,10 @@
 }
 
 - (BOOL)shouldUpdateWithObject:(id)anObject {
-    if (![anObject isKindOfClass:[InfomationTableViewObject class]]) {
+    if (![anObject isKindOfClass:[InfomationCellObject class]]) {
         return false;
     }
-    InfomationTableViewObject *object = anObject;
+    InfomationCellObject *object = anObject;
     _messange.text = object.messange;
     return true;
 }

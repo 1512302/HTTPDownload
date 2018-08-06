@@ -54,7 +54,7 @@
         cellObject.progressString = @"Pending...";
         [_downloadTableView addCell:cellObject];
         
-        [_downloadManager createDownloadWithURLString:@"http://www.vietnamvisaonentry.com/file/2014/06/coconut-tree.jpg" completion:^(DownloadObjectModel *downloadObject, NSError *error) {
+        [_downloadManager createDownloadWithURLString:url completion:^(DownloadObjectModel *downloadObject, NSError *error) {
             [downloadObject addUpdateBlock:^(NSNumber * totalWrite, NSNumber * totalExpected) {
                 [cellObject progressDidUpdate:[totalWrite intValue] total:[totalExpected intValue]];
             }];

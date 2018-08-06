@@ -8,11 +8,11 @@
 
 #import "DownloadTableView.h"
 #import "TableViewCellModel.h"
-#import "InfomationTableViewObject.h"
+#import "InfomationCellObject.h"
 
 @interface DownloadTableView()
 
-@property (strong, nonatomic) InfomationTableViewObject *infoObject;
+@property (strong, nonatomic) InfomationCellObject *infoObject;
 @end
 
 @implementation DownloadTableView
@@ -96,7 +96,7 @@
         return;
     }
     if (!_infoObject) {
-       _infoObject = [InfomationTableViewObject new];
+       _infoObject = [InfomationCellObject new];
     }
     
     switch (_error.code) {

@@ -6,10 +6,10 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import "InfomationTableViewObject.h"
+#import "InfomationCellObject.h"
 #import "InformationTableViewCell.h"
 
-@implementation InfomationTableViewObject
+@implementation InfomationCellObject
 
 - (Class)cellClass {
     return [InformationTableViewCell class];

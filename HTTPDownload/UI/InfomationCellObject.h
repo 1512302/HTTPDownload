@@ -8,7 +8,7 @@
 
 #import "CellObjectModel.h"
 
-@interface InfomationTableViewObject : CellObjectModel
+@interface InfomationCellObject : CellObjectModel
 
 @property (strong, nonatomic, readwrite) NSString *messange;
 

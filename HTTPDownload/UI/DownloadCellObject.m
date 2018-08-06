@@ -173,7 +173,6 @@
 - (void)openFile {
     if (_filePath) {
         //_filePath = @"/coconut-tree.jpg";
-        
         NSURL *resourceToOpen = [NSURL fileURLWithPath:_filePath];
         BOOL canOpenResource = [[UIApplication sharedApplication] canOpenURL:resourceToOpen];
         if (canOpenResource) {
