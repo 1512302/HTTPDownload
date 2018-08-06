@@ -22,11 +22,16 @@
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
 		93DEB8F5210EF92D00CFA398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */; };
 		93DEB8F8210EF92D00CFA398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8F7210EF92D00CFA398 /* main.m */; };
+<<<<<<< HEAD
 		93EB97DA2118385B002C24C7 /* DownloadFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D121183859002C24C7 /* DownloadFactory.m */; };
 		93EB97DB2118385B002C24C7 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D321183859002C24C7 /* DownloadManager.m */; };
 		93EB97DC2118385B002C24C7 /* AFSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D42118385A002C24C7 /* AFSession.m */; };
 		93EB97DD2118385B002C24C7 /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D82118385B002C24C7 /* DownloadObjectModel.m */; };
 		93EB97DE2118385B002C24C7 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D92118385B002C24C7 /* DownloadTask.m */; };
+=======
+		A3FC76AF21145EFB00252D87 /* ObjectForQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC76AC21145EFB00252D87 /* ObjectForQueue.m */; };
+		A3FC76B021145EFB00252D87 /* PriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FC76AD21145EFB00252D87 /* PriorityQueue.m */; };
+>>>>>>> cf07d2dd645baab316358ed8af3507d7b0220b1a
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,7 @@
 		93DEB8F4210EF92D00CFA398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DEB8F6210EF92D00CFA398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93DEB8F7210EF92D00CFA398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		93EB97D021183859002C24C7 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
 		93EB97D121183859002C24C7 /* DownloadFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFactory.m; sourceTree = "<group>"; };
 		93EB97D221183859002C24C7 /* DownloadObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
@@ -68,6 +74,12 @@
 		93EB97D72118385B002C24C7 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		93EB97D82118385B002C24C7 /* DownloadObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
 		93EB97D92118385B002C24C7 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
+=======
+		A3FC76AB21145EFB00252D87 /* ObjectForQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectForQueue.h; sourceTree = "<group>"; };
+		A3FC76AC21145EFB00252D87 /* ObjectForQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectForQueue.m; sourceTree = "<group>"; };
+		A3FC76AD21145EFB00252D87 /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
+		A3FC76AE21145EFB00252D87 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+>>>>>>> cf07d2dd645baab316358ed8af3507d7b0220b1a
 		E4CB985B017EB79A888DF87C /* Pods-HTTPDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPDownload/Pods-HTTPDownload.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +107,21 @@
 		9317F124211314FC002B4B76 /* DownloadCore */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				A3FC76AA21145EE000252D87 /* PriorityQueue */,
+				93D940592114079F00C7F031 /* DownloadFactory.h */,
+				93D9405D2114079F00C7F031 /* DownloadFactory.m */,
+				93D94061211407A000C7F031 /* AFSession.h */,
+				93D940582114079F00C7F031 /* AFSession.m */,
+				93D9405C2114079F00C7F031 /* DownloadManager.h */,
+				93D9405A2114079F00C7F031 /* DownloadManager.m */,
+				93D9405B2114079F00C7F031 /* DownloadObjectDelegate.h */,
+				93D9405E211407A000C7F031 /* DownloadObjectModel.h */,
+				93D94062211407A000C7F031 /* DownloadObjectModel.m */,
+				93D9405F211407A000C7F031 /* DownloadTask.h */,
+				93D94060211407A000C7F031 /* DownloadTask.m */,
+>>>>>>> cf07d2dd645baab316358ed8af3507d7b0220b1a
 			);
 			path = DownloadCore;
 			sourceTree = "<group>";
@@ -182,6 +209,17 @@
 				9374CEA3210F0A09004C6C9B /* UI */,
 			);
 			path = HTTPDownload;
+			sourceTree = "<group>";
+		};
+		A3FC76AA21145EE000252D87 /* PriorityQueue */ = {
+			isa = PBXGroup;
+			children = (
+				A3FC76AB21145EFB00252D87 /* ObjectForQueue.h */,
+				A3FC76AC21145EFB00252D87 /* ObjectForQueue.m */,
+				A3FC76AE21145EFB00252D87 /* PriorityQueue.h */,
+				A3FC76AD21145EFB00252D87 /* PriorityQueue.m */,
+			);
+			path = PriorityQueue;
 			sourceTree = "<group>";
 		};
 		C56555EA007B32F01A98F598 /* Frameworks */ = {
@@ -288,11 +326,20 @@
 				93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */,
 				93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */,
 				93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */,
+<<<<<<< HEAD
 				93EB97DE2118385B002C24C7 /* DownloadTask.m in Sources */,
 				93EB97DB2118385B002C24C7 /* DownloadManager.m in Sources */,
 				93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */,
 				93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */,
 				93EB97DC2118385B002C24C7 /* AFSession.m in Sources */,
+=======
+				93D94066211407A100C7F031 /* DownloadTask.m in Sources */,
+				93D94064211407A100C7F031 /* DownloadManager.m in Sources */,
+				A3FC76B021145EFB00252D87 /* PriorityQueue.m in Sources */,
+				93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */,
+				93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */,
+				A3FC76AF21145EFB00252D87 /* ObjectForQueue.m in Sources */,
+>>>>>>> cf07d2dd645baab316358ed8af3507d7b0220b1a
 				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
 				93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */,
@@ -435,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2J8JLH69D;
 				INFOPLIST_FILE = HTTPDownload/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2J8JLH69D;
 				INFOPLIST_FILE = HTTPDownload/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

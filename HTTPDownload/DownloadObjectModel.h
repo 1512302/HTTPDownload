@@ -10,7 +10,7 @@
  
 @interface DownloadObjectModel : NSObject
 
-@property (nonatomic) NSNumber* isDownloaded;
+@property (nonatomic) NSNumber *isDownloaded;
 
 @property (nonatomic) NSMutableArray* completionBlocks;
 
