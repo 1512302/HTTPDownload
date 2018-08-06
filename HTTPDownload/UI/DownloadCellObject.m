@@ -60,7 +60,7 @@
     if (_cell) {
         __weak __typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.cell.progressLabel.text = progressString;
+            weakSelf.cell.progressLabel.text = weakSelf.progressString;
         });
     }
 }
@@ -73,11 +73,12 @@
     } else {
         self.progressString = [NSString stringWithFormat:@"%ld B", currentSize];
     }
-    
-
 }
 
 - (void)setState:(DownloadState)state {
+    if (_state == DownloadStateError || _state == DownloadStateComplete) {
+        return;
+    }
     if (_state != state) {
         _state = state;
         switch (state) {
