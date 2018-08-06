@@ -7,7 +7,7 @@
 //
 
 #import "DownloadTableViewCell.h"
-#import "DownloadTableViewObject.h"
+#import "DownloadCellObject.h"
 #import "DownloadTableView.h"
 
 @interface DownloadTableViewCell()
@@ -22,9 +22,19 @@
 
 @implementation DownloadTableViewCell
 
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    tapGesture.numberOfTapsRequired = 2;
+    [self addGestureRecognizer:tapGesture];
+}
+
+- (void)handleTapGesture:(id)sender {
+    if (_cellObject) {
+        [_cellObject openFile];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -39,10 +49,10 @@
 }
 
 - (BOOL)shouldUpdateWithObject:(id)anObject {
-    if (![anObject isKindOfClass:[DownloadTableViewObject class]]) {
+    if (![anObject isKindOfClass:[DownloadCellObject class]]) {
         return false;
     }
-    DownloadTableViewObject *object = anObject;
+    DownloadCellObject *object = anObject;
     _titleLabel.text = object.title;
     _progressLabel.text = object.progressString;
     _progressView.progress = object.progress;
@@ -56,6 +66,10 @@
 }
 
 - (IBAction)cencelButtonTouch:(id)sender {
+    if (!_cellObject) {
+        return;
+    }
+    
     id view = [self superview];
     
     while (view && [view isKindOfClass:[UITableView class]] == NO) {
@@ -63,20 +77,29 @@
     }
     DownloadTableView *tableView = view;
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Cancel" message:@"Do you want cancel download this file?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    __weak __typeof(self) weakSelf = self;
-    UIAlertAction* exitAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        [weakSelf.cellObject.downloadManager cancel];
-        [tableView removeCell:self.cellObject];
-    }];
-    
-    UIAlertAction* comebackAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-    
-    [alert addAction:exitAction];
-    [alert addAction:comebackAction];
-    UIViewController *viewCotroller = [UIApplication sharedApplication].windows[0].rootViewController;
-    [viewCotroller presentViewController:alert animated:YES completion:nil];
+    switch (_cellObject.state) {
+        case DownloadStateError:
+            [tableView removeCell:self.cellObject];
+            break;
+            
+        default: {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Cancel" message:@"Do you want cancel download this file?" preferredStyle:UIAlertControllerStyleAlert];
+            
+            __weak __typeof(self) weakSelf = self;
+            UIAlertAction* exitAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                [weakSelf.cellObject.downloadManager cancel];
+                [tableView removeCell:self.cellObject];
+            }];
+            
+            UIAlertAction* comebackAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:exitAction];
+            [alert addAction:comebackAction];
+            UIViewController *viewCotroller = [UIApplication sharedApplication].windows[0].rootViewController;
+            [viewCotroller presentViewController:alert animated:YES completion:nil];
+            break;
+        }
+    }
 }
 
 - (IBAction)pauseButtonTouch:(id)sender {
@@ -97,6 +120,7 @@
                 [self pauseState];
                 break;
             case DownloadStateComplete:
+            case DownloadStateError:
                 [_progressView setHidden:YES];
             default:
                 [self noDownloadState];
@@ -110,16 +134,20 @@
 - (void)pauseState {
     [_pauseButton setHidden:YES];
     [_resumeButton setHidden:NO];
+    [_progressView setHidden:NO];
 }
 
 - (void)resumeState {
     [_pauseButton setHidden:NO];
     [_resumeButton setHidden:YES];
+    [_progressView setHidden:NO];
 }
 
 - (void)noDownloadState {
     [_resumeButton setHidden:YES];
     [_pauseButton setHidden:YES];
 }
+
+
 
 @end

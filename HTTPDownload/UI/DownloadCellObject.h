@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, DownloadState) {
 
 @class DownloadTableViewCell;
 
-@interface DownloadTableViewObject : CellObjectModel <DownloadObjectDelegate>
+@interface DownloadCellObject : CellObjectModel
 
 @property (readwrite, nonatomic, strong) NSString *title;
 
@@ -35,6 +35,8 @@ typedef NS_ENUM(NSUInteger, DownloadState) {
 
 @property (readwrite, nonatomic, strong) DownloadObjectModel *downloadManager;
 
+@property (readwrite, nonatomic, strong) NSString *filePath;
+
 - (instancetype)init;
 
 - (void)pause;
@@ -47,6 +49,12 @@ typedef NS_ENUM(NSUInteger, DownloadState) {
 
 - (void)downPriority;
 
+- (void)openFile;
+
 - (UIColor *)getColorBackgroud;
+
+- (void)progressDidUpdate:(NSUInteger)currentSize total:(NSUInteger)totalSize;
+
+- (void)downloadFinish:(NSString *)filePath;
 
 @end

@@ -6,14 +6,14 @@
 //  Copyright © 2018 CPU11367. All rights reserved.
 //
 
-#import "DownloadTableViewObject.h"
+#import "DownloadCellObject.h"
 #import "DownloadTableViewCell.h"
 
-@interface DownloadTableViewObject()
+@interface DownloadCellObject()
 
 @end
 
-@implementation DownloadTableViewObject
+@implementation DownloadCellObject
 
 
 
@@ -67,7 +67,6 @@
 
 - (void)progressDidUpdate:(NSUInteger)currentSize total:(NSUInteger)totalSize {
 
-    self.state = DownloadStateDownloading;
     if (totalSize > 0) {	
         self.progressString = [NSString stringWithFormat:@"%ld/%ld B", currentSize, totalSize];
         self.progress = (float)currentSize / totalSize;
@@ -119,30 +118,35 @@
     UIColor *backgroudColor;
     switch (_state) {
         case DownloadStateComplete:
-            backgroudColor = [DownloadTableViewObject successColor];
+            backgroudColor = [DownloadCellObject successColor];
             break;
         case DownloadStateError:
-            backgroudColor = [DownloadTableViewObject errorColor];
+            backgroudColor = [DownloadCellObject errorColor];
             break;
         case DownloadStatePending:
-            backgroudColor = [DownloadTableViewObject pendingColor];
+            backgroudColor = [DownloadCellObject pendingColor];
             break;
         case DownloadStatePause:
-            backgroudColor = [DownloadTableViewObject pauseColor];
+            backgroudColor = [DownloadCellObject pauseColor];
             break;
         default:
-            backgroudColor = [DownloadTableViewObject normalColor];
+            backgroudColor = [DownloadCellObject normalColor];
             break;
     }
     return backgroudColor;
 }
 
 - (void)downloadFinish:(NSString *)filePath {
+    _filePath = filePath;
     if (filePath) {
         self.state = DownloadStateComplete;
     } else {
         self.state = DownloadStateError;
     }
+}
+
+- (void)taskWillStartDownload {
+    self.state = DownloadStateDownloading;
 }
 
 - (void)pause {
@@ -165,15 +169,34 @@
     
 }
 
+- (void)openFile {
+    if (_filePath) {
+        //_filePath = @"/coconut-tree.jpg";
+        
+        NSURL *resourceToOpen = [NSURL fileURLWithPath:_filePath];
+        BOOL canOpenResource = [[UIApplication sharedApplication] canOpenURL:resourceToOpen];
+        if (canOpenResource) {
+            [[UIApplication sharedApplication] openURL:resourceToOpen options:@{} completionHandler:^(BOOL success) {
+                if (success) {
+                    
+                } else {
+                    
+                }
+            }];
+        }
+    }
+}
+//filePath    __NSCFString *    @"file: ///Us ers/c pu113 67/Li brary /Deve loper /Core Simul ator/ Devic es/B1 692B0 8-2CD 0-4E5 3-9A9 2-18A E9C26 C97C/ data/ Conta iners /Data /Application/B4C3E093-776D-4992-9DB7-8A9EAD644FE1/Documents/coconut-tree.jpg"    0x00006040005a7c40
+
 # pragma constant
 
 + (UIColor *)successColor {
     static UIColor *successColor;
     static dispatch_once_t onceToken1;
     dispatch_once(&onceToken1, ^{
-        CGFloat red = 138.0 / 255;
-        CGFloat green = 238.0 / 255;
-        CGFloat blue = 157.0 / 255;
+        CGFloat red = 166.0 / 255;
+        CGFloat green = 235.0 / 255;
+        CGFloat blue = 199.0 / 255;
         successColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     });
     return successColor;
@@ -184,9 +207,9 @@
     static UIColor *errorColor;
     static dispatch_once_t onceToken2;
     dispatch_once(&onceToken2, ^{
-        CGFloat red = 238.0 / 255;
+        CGFloat red = 248.0 / 255;
         CGFloat green = 183.0 / 255;
-        CGFloat blue = 183.0 / 255;
+        CGFloat blue = 178.0 / 255;
         errorColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     });
     return errorColor;
@@ -196,9 +219,9 @@
     static UIColor *normalColor;
     static dispatch_once_t onceToken3;
     dispatch_once(&onceToken3, ^{
-        CGFloat red = 138.0 / 255;
-        CGFloat green = 238.0 / 255;
-        CGFloat blue = 217.0 / 255;
+        CGFloat red = 171.0 / 255;
+        CGFloat green = 214.0 / 255;
+        CGFloat blue = 239.0 / 255;
         normalColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     });
     return normalColor;
@@ -208,9 +231,9 @@
     static UIColor *pendingColor;
     static dispatch_once_t onceToken4;
     dispatch_once(&onceToken4, ^{
-        CGFloat red = 238.0 / 255;
-        CGFloat green = 232.0 / 255;
-        CGFloat blue = 138.0 / 255;
+        CGFloat red = 250.0 / 255;
+        CGFloat green = 231.0 / 255;
+        CGFloat blue = 164.0 / 255;
         pendingColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     });
     return pendingColor;
@@ -220,9 +243,9 @@
     static UIColor *pauseColor;
     static dispatch_once_t onceToken5;
     dispatch_once(&onceToken5, ^{
-        CGFloat red = 138.0 / 255;
-        CGFloat green = 168.0 / 255;
-        CGFloat blue = 238.0 / 255;
+        CGFloat red = 166.0 / 255;
+        CGFloat green = 204.0 / 255;
+        CGFloat blue = 225.0 / 255;
         pauseColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     });
     return pauseColor;

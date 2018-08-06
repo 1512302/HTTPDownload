@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "DownloadTableViewObject.h"
+#import "DownloadCellObject.h"
 #import "DownloadManager.h"
 
 @interface ViewController ()
@@ -49,20 +49,35 @@
     NSString *url = _urlInputTextField.text;
     _urlInputTextField.text = @"";
     if (url.length > 0) {
-        DownloadTableViewObject *cellObject = [DownloadTableViewObject new];
-        cellObject.title = url;
+        DownloadCellObject *cellObject = [DownloadCellObject new];
+        cellObject.title = [ViewController getNameInURL:url];
         cellObject.progressString = @"Pending...";
         [_downloadTableView addCell:cellObject];
         
-        [_downloadManager downloadWithURLString:url completion:^(DownloadObjectModel *downloadObject, NSError *error) {
+        [_downloadManager createDownloadWithURLString:@"http://www.vietnamvisaonentry.com/file/2014/06/coconut-tree.jpg" completion:^(DownloadObjectModel *downloadObject, NSError *error) {
+            [downloadObject addUpdateBlock:^(NSNumber * totalWrite, NSNumber * totalExpected) {
+                [cellObject progressDidUpdate:[totalWrite intValue] total:[totalExpected intValue]];
+            }];
+            [downloadObject addCompletionBlock:^(NSURL *fileURL) {
+                [cellObject downloadFinish:fileURL.absoluteString];
+            }];
+            
             cellObject.downloadManager = downloadObject;
-            downloadObject.delegate = cellObject;
+            [downloadObject resume];
         }];
         
     }
 }
 
-
++ (NSString *)getNameInURL:(NSString *)url {
+    int startPoint = 0;
+    for (int i = 1; i < [url length]; ++i) {
+        if ([url characterAtIndex:i] == '/') {
+            startPoint = i + 1;
+        }
+    }
+    return [url substringFromIndex:startPoint];
+}
 
 
 @end

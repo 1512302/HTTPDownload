@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HTTPDownload/DownloadCore/DownloadTask.m"
-            timestampString = "554976781.084559"
+            filePath = "HTTPDownload/UI/DownloadTableViewObject.m"
+            timestampString = "555228254.936452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-pause"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-openFile"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HTTPDownload/UI/DownloadTableViewObject.m"
-            timestampString = "554977144.718684"
+            timestampString = "555228254.9368629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-progressDidUpdate:total:"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-openFile"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HTTPDownload/UI/DownloadTableViewCell.m"
+            timestampString = "555236366.027127"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-resumeButtonTouch:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

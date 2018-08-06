@@ -8,7 +8,7 @@
 
 #import "TableViewCellModel.h"
 
-@class DownloadTableViewObject;
+@class DownloadCellObject;
 
 @interface DownloadTableViewCell : TableViewCellModel
 
@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
-@property (weak, nonatomic, readwrite) DownloadTableViewObject *cellObject;
+@property (weak, nonatomic, readwrite) DownloadCellObject *cellObject;
 
 - (void)updateState;
 

@@ -10,23 +10,23 @@
 		8E6B139EACEFC9DE4B08F941 /* libPods-HTTPDownload.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B5CC1ECB17262C5892B324 /* libPods-HTTPDownload.a */; };
 		9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */; };
 		93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26642110426000CE3D5A /* DownloadTableView.m */; };
-		93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26672110438000CE3D5A /* DownloadTableViewObject.m */; };
+		93AB26682110438000CE3D5A /* DownloadCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26672110438000CE3D5A /* DownloadCellObject.m */; };
 		93AB26722110D69800CE3D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AB26712110D69800CE3D5A /* Main.storyboard */; };
 		93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2674211150B100CE3D5A /* InformationTableViewCell.m */; };
 		93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB2677211155A000CE3D5A /* TableViewModel.m */; };
 		93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267A2111563F00CE3D5A /* CellObjectModel.m */; };
 		93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB267D2111599200CE3D5A /* TableViewCellModel.m */; };
 		93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */; };
-		93D94063211407A100C7F031 /* AFSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D940582114079F00C7F031 /* AFSession.m */; };
-		93D94064211407A100C7F031 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9405A2114079F00C7F031 /* DownloadManager.m */; };
-		93D94065211407A100C7F031 /* DownloadFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9405D2114079F00C7F031 /* DownloadFactory.m */; };
-		93D94066211407A100C7F031 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D94060211407A000C7F031 /* DownloadTask.m */; };
-		93D94067211407A100C7F031 /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D94062211407A000C7F031 /* DownloadObjectModel.m */; };
 		93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8E9210EF92900CFA398 /* AppDelegate.m */; };
 		93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8EC210EF92900CFA398 /* ViewController.m */; };
 		93DEB8F2210EF92D00CFA398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F1210EF92D00CFA398 /* Assets.xcassets */; };
 		93DEB8F5210EF92D00CFA398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DEB8F3210EF92D00CFA398 /* LaunchScreen.storyboard */; };
 		93DEB8F8210EF92D00CFA398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEB8F7210EF92D00CFA398 /* main.m */; };
+		93EB97DA2118385B002C24C7 /* DownloadFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D121183859002C24C7 /* DownloadFactory.m */; };
+		93EB97DB2118385B002C24C7 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D321183859002C24C7 /* DownloadManager.m */; };
+		93EB97DC2118385B002C24C7 /* AFSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D42118385A002C24C7 /* AFSession.m */; };
+		93EB97DD2118385B002C24C7 /* DownloadObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D82118385B002C24C7 /* DownloadObjectModel.m */; };
+		93EB97DE2118385B002C24C7 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EB97D92118385B002C24C7 /* DownloadTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
 		93AB26632110426000CE3D5A /* DownloadTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableView.h; sourceTree = "<group>"; };
 		93AB26642110426000CE3D5A /* DownloadTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableView.m; sourceTree = "<group>"; };
-		93AB26662110438000CE3D5A /* DownloadTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewObject.h; sourceTree = "<group>"; };
-		93AB26672110438000CE3D5A /* DownloadTableViewObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewObject.m; sourceTree = "<group>"; };
+		93AB26662110438000CE3D5A /* DownloadCellObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadCellObject.h; sourceTree = "<group>"; };
+		93AB26672110438000CE3D5A /* DownloadCellObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadCellObject.m; sourceTree = "<group>"; };
 		93AB26712110D69800CE3D5A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		93AB2673211150B100CE3D5A /* InformationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
 		93AB2674211150B100CE3D5A /* InformationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
@@ -49,17 +49,6 @@
 		93AB267D2111599200CE3D5A /* TableViewCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellModel.m; sourceTree = "<group>"; };
 		93AB267F2111647F00CE3D5A /* InfomationTableViewObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfomationTableViewObject.h; sourceTree = "<group>"; };
 		93AB26802111647F00CE3D5A /* InfomationTableViewObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfomationTableViewObject.m; sourceTree = "<group>"; };
-		93D940582114079F00C7F031 /* AFSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSession.m; sourceTree = "<group>"; };
-		93D940592114079F00C7F031 /* DownloadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFactory.h; sourceTree = "<group>"; };
-		93D9405A2114079F00C7F031 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
-		93D9405B2114079F00C7F031 /* DownloadObjectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectDelegate.h; sourceTree = "<group>"; };
-		93D9405C2114079F00C7F031 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		93D9405D2114079F00C7F031 /* DownloadFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFactory.m; sourceTree = "<group>"; };
-		93D9405E211407A000C7F031 /* DownloadObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
-		93D9405F211407A000C7F031 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
-		93D94060211407A000C7F031 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
-		93D94061211407A000C7F031 /* AFSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSession.h; sourceTree = "<group>"; };
-		93D94062211407A000C7F031 /* DownloadObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
 		93DEB8E5210EF92900CFA398 /* HTTPDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEB8E8210EF92900CFA398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93DEB8E9210EF92900CFA398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +58,16 @@
 		93DEB8F4210EF92D00CFA398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DEB8F6210EF92D00CFA398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93DEB8F7210EF92D00CFA398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93EB97D021183859002C24C7 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
+		93EB97D121183859002C24C7 /* DownloadFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFactory.m; sourceTree = "<group>"; };
+		93EB97D221183859002C24C7 /* DownloadObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadObjectModel.h; sourceTree = "<group>"; };
+		93EB97D321183859002C24C7 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		93EB97D42118385A002C24C7 /* AFSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSession.m; sourceTree = "<group>"; };
+		93EB97D52118385A002C24C7 /* AFSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSession.h; sourceTree = "<group>"; };
+		93EB97D62118385A002C24C7 /* DownloadFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFactory.h; sourceTree = "<group>"; };
+		93EB97D72118385B002C24C7 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		93EB97D82118385B002C24C7 /* DownloadObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadObjectModel.m; sourceTree = "<group>"; };
+		93EB97D92118385B002C24C7 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
 		E4CB985B017EB79A888DF87C /* Pods-HTTPDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPDownload/Pods-HTTPDownload.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,17 +95,6 @@
 		9317F124211314FC002B4B76 /* DownloadCore */ = {
 			isa = PBXGroup;
 			children = (
-				93D94061211407A000C7F031 /* AFSession.h */,
-				93D940582114079F00C7F031 /* AFSession.m */,
-				93D940592114079F00C7F031 /* DownloadFactory.h */,
-				93D9405D2114079F00C7F031 /* DownloadFactory.m */,
-				93D9405C2114079F00C7F031 /* DownloadManager.h */,
-				93D9405A2114079F00C7F031 /* DownloadManager.m */,
-				93D9405B2114079F00C7F031 /* DownloadObjectDelegate.h */,
-				93D9405E211407A000C7F031 /* DownloadObjectModel.h */,
-				93D94062211407A000C7F031 /* DownloadObjectModel.m */,
-				93D9405F211407A000C7F031 /* DownloadTask.h */,
-				93D94060211407A000C7F031 /* DownloadTask.m */,
 			);
 			path = DownloadCore;
 			sourceTree = "<group>";
@@ -118,8 +106,8 @@
 				93DEB8EC210EF92900CFA398 /* ViewController.m */,
 				93AB26632110426000CE3D5A /* DownloadTableView.h */,
 				93AB26642110426000CE3D5A /* DownloadTableView.m */,
-				93AB26662110438000CE3D5A /* DownloadTableViewObject.h */,
-				93AB26672110438000CE3D5A /* DownloadTableViewObject.m */,
+				93AB26662110438000CE3D5A /* DownloadCellObject.h */,
+				93AB26672110438000CE3D5A /* DownloadCellObject.m */,
 				9374CEA4210F0F93004C6C9B /* DownloadTableViewCell.h */,
 				9374CEA5210F0F93004C6C9B /* DownloadTableViewCell.m */,
 				93AB267F2111647F00CE3D5A /* InfomationTableViewObject.h */,
@@ -177,9 +165,19 @@
 		93DEB8E7210EF92900CFA398 /* HTTPDownload */ = {
 			isa = PBXGroup;
 			children = (
+				93DEB8F6210EF92D00CFA398 /* Info.plist */,
 				9374CEA7210F9B52004C6C9B /* Model */,
 				9317F124211314FC002B4B76 /* DownloadCore */,
-				93DEB8F6210EF92D00CFA398 /* Info.plist */,
+				93EB97D52118385A002C24C7 /* AFSession.h */,
+				93EB97D42118385A002C24C7 /* AFSession.m */,
+				93EB97D62118385A002C24C7 /* DownloadFactory.h */,
+				93EB97D121183859002C24C7 /* DownloadFactory.m */,
+				93EB97D72118385B002C24C7 /* DownloadManager.h */,
+				93EB97D321183859002C24C7 /* DownloadManager.m */,
+				93EB97D221183859002C24C7 /* DownloadObjectModel.h */,
+				93EB97D82118385B002C24C7 /* DownloadObjectModel.m */,
+				93EB97D021183859002C24C7 /* DownloadTask.h */,
+				93EB97D92118385B002C24C7 /* DownloadTask.m */,
 				93AB2669211059F800CE3D5A /* Default */,
 				9374CEA3210F0A09004C6C9B /* UI */,
 			);
@@ -286,21 +284,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D94067211407A100C7F031 /* DownloadObjectModel.m in Sources */,
+				93EB97DA2118385B002C24C7 /* DownloadFactory.m in Sources */,
 				93DEB8ED210EF92900CFA398 /* ViewController.m in Sources */,
-				93D94063211407A100C7F031 /* AFSession.m in Sources */,
 				93AB26652110426000CE3D5A /* DownloadTableView.m in Sources */,
 				93AB2678211155A000CE3D5A /* TableViewModel.m in Sources */,
-				93D94066211407A100C7F031 /* DownloadTask.m in Sources */,
-				93D94064211407A100C7F031 /* DownloadManager.m in Sources */,
+				93EB97DE2118385B002C24C7 /* DownloadTask.m in Sources */,
+				93EB97DB2118385B002C24C7 /* DownloadManager.m in Sources */,
 				93AB267E2111599200CE3D5A /* TableViewCellModel.m in Sources */,
 				93AB2675211150B100CE3D5A /* InformationTableViewCell.m in Sources */,
+				93EB97DC2118385B002C24C7 /* AFSession.m in Sources */,
 				9374CEA6210F0F93004C6C9B /* DownloadTableViewCell.m in Sources */,
-				93D94065211407A100C7F031 /* DownloadFactory.m in Sources */,
 				93DEB8F8210EF92D00CFA398 /* main.m in Sources */,
 				93AB267B2111563F00CE3D5A /* CellObjectModel.m in Sources */,
 				93AB26812111647F00CE3D5A /* InfomationTableViewObject.m in Sources */,
-				93AB26682110438000CE3D5A /* DownloadTableViewObject.m in Sources */,
+				93AB26682110438000CE3D5A /* DownloadCellObject.m in Sources */,
+				93EB97DD2118385B002C24C7 /* DownloadObjectModel.m in Sources */,
 				93DEB8EA210EF92900CFA398 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
