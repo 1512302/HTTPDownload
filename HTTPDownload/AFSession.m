@@ -23,15 +23,22 @@
 }
 
 - (DownloadObjectModel *)createDownloadWithURLString:(NSString *)URLString {
-    DownloadTask* downloadTask;
+    DownloadTask* downloadTask = [DownloadTask new];
     if (_managerTaskDownload && URLString) {
         NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
         NSURLSessionDownloadTask* nativeDownloadTask = [_managerTaskDownload
                                                         downloadTaskWithRequest:request
                                                         progress:nil
                                                         destination:nil
-                                                        completionHandler:nil];
-        downloadTask = [[DownloadTask alloc] initWithTask:nativeDownloadTask];
+                                                        completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                                            if (!filePath) {
+                                                                filePath = [NSURL URLWithString:@""];
+                                                            }
+                                                            [NSNotificationCenter.defaultCenter postNotificationName:@"ProgressDidFinish"
+                                                                                                              object:downloadTask
+                                                                                                            userInfo:@{@"url": filePath}];
+                                                        }];
+        downloadTask.downloadTask = nativeDownloadTask;
     }
     return downloadTask;
 }

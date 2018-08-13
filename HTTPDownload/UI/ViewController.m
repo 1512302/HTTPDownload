@@ -59,7 +59,11 @@
                 [cellObject progressDidUpdate:[totalWrite intValue] total:[totalExpected intValue]];
             }];
             [downloadObject addCompletionBlock:^(NSURL *fileURL) {
-                [cellObject downloadFinish:fileURL.absoluteString];
+                NSString *filePath = fileURL.absoluteString;
+                if (filePath.length == 0) {
+                    filePath = nil;
+                }
+                [cellObject downloadFinish:filePath];
             }];
             
             cellObject.downloadManager = downloadObject;

@@ -10,6 +10,16 @@
 
 @implementation DownloadTask
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleUpdate:) name:@"ProgressDidUpdate" object:_downloadTask];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleCompletion:) name:@"ProgressDidFinish" object:_downloadTask];
+    }
+    return self;
+}
+
 - (instancetype)initWithTask:(NSURLSessionDownloadTask *)task {
     self = [super init];
     if (self) {
@@ -19,6 +29,11 @@
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleCompletion:) name:@"ProgressDidFinish" object:_downloadTask];
     }
     return self;
+}
+
+- (void)setDownloadTask:(NSURLSessionDownloadTask *)task {
+    _downloadTask = [task copy];
+    self.delegateQueue = dispatch_queue_create([task.progress.fileURL.absoluteString cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_CONCURRENT);
 }
 
 - (void)pause {
